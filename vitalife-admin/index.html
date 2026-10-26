@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>แดชบอร์ดแอดมิน | VitaLife</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="side">
+    <div class="brand"><span class="pill-logo"></span>VitaLife<small>หลังบ้าน</small></div>
+    <nav>
+      <a class="on" href="index.html">แดชบอร์ด</a>
+      <a class="off" title="อยู่ในเฟส 5">จัดการสินค้า</a>
+      <a class="off" title="อยู่ในเฟส 5">คำสั่งซื้อ</a>
+      <a class="off" title="ฝั่งลูกค้า">กลับหน้าร้าน</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <header class="top">
+      <div>
+        <h1>แดชบอร์ด</h1>
+        <p id="today" class="muted"></p>
+      </div>
+      <div class="who">ผู้ดูแลระบบ · admin@vitalife.test</div>
+    </header>
+
+    <section class="stats" id="stats"></section>
+
+    <section class="grid">
+      <div class="panel wide">
+        <div class="panel-head">
+          <h2>สรุปรายได้</h2>
+          <div class="seg" id="range">
+            <button data-r="7" class="on">7 วัน</button>
+            <button data-r="14">14 วัน</button>
+            <button data-r="w">รายสัปดาห์</button>
+          </div>
+        </div>
+        <div id="chart" class="chart"></div>
+        <div class="scroll"><table id="revTable"></table></div>
+      </div>
+
+      <div class="panel side-panel">
+        <div class="panel-head"><h2>สินค้าใกล้หมด</h2><span id="lowCount" class="tag warn"></span></div>
+        <ul id="low" class="low"></ul>
+      </div>
+
+      <div class="panel wide">
+        <div class="panel-head"><h2>คำสั่งซื้อล่าสุด</h2><span class="muted">8 รายการล่าสุด</span></div>
+        <div class="scroll"><table id="recent"></table></div>
+      </div>
+    </section>
+  </main>
+</div>
+<script src="js/data.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>
